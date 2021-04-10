@@ -1,24 +1,59 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*** Skills Assessment 
+Problem 
+Working with the BNB industry means that we have to integrate with a lot of external APIs. Being able to parse API payloads and save it into our database is one of the many core skills that we are looking for. Given that there are two external API payloads, create a page or endpoint that accepts the given sample payload formats and save it as an entry in a Reservation model that belongs to a guest. 
+Service Payload Format 1 
 
-Things you may want to cover:
+```{ 
+ "reservation": { 
+ "start_date": "2020-03-12", 
+ "end_date": "2020-03-16", 
+ "expected_payout_amount": "3800.00", 
+ "guest_details": { 
+ "localized_description": "4 guests", 
+ "number_of_adults": 2, 
+ "number_of_children": 2, 
+ "number_of_infants": 0 
+ }, 
+ "guest_email": "wayne_woodbridge@bnb.com", 
+ "guest_first_name": "Wayne", 
+ "guest_id": 1, 
+ "guest_last_name": "Woodbridge", 
+ "guest_phone_numbers": [ 
+ "639123456789", 
+ "639123456789" 
+ ], 
+ "listing_security_price_accurate": "500.00", 
+ "host_currency": "AUD", 
+ "nights": 4, 
+ "number_of_guests": 4, 
+ "status_type": "accepted", 
+ "total_paid_amount_accurate": "4500.00", 
+}```
 
-* Ruby version
+Service Payload Format 2 
 
-* System dependencies
+```{ 
+ "start_date": "2020-03-12", 
+ "end_date": "2020-03-16", 
+ "nights": 4, 
+ "guests": 4, 
+ "adults": 2, 
+ "children": 2, 
+ "infants": 0, 
+ "status": "accepted", 
+ "guest": { 
+ "id": 1, 
+ "first_name": "Wayne", 
+ "last_name": "Woodbridge", 
+ "phone": "639123456789", 
+ "email": "wayne_woodbridge@bnb.com" 
+ }, 
+ "currency": "AUD", 
+ "payout_price": "3800.00", 
+ "security_price": "500", 
+ "total_price": "4500.00" 
+}```
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
