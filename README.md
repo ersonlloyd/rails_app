@@ -5,9 +5,10 @@
 *Problem 
 
 Working with the BNB industry means that we have to integrate with a lot of external APIs. Being able to parse API payloads and save it into our database is one of the many core skills that we are looking for. Given that there are two external API payloads, create a page or endpoint that accepts the given sample payload formats and save it as an entry in a Reservation model that belongs to a guest. 
-Service Payload Format 1 
 
-```{ 
+*Service Payload Format 1 
+
+{ 
  "reservation": { 
  "start_date": "2020-03-12", 
  "end_date": "2020-03-16", 
@@ -32,11 +33,11 @@ Service Payload Format 1
  "number_of_guests": 4, 
  "status_type": "accepted", 
  "total_paid_amount_accurate": "4500.00", 
-}```
+}
 
-Service Payload Format 2 
+*Service Payload Format 2 
 
-```{ 
+{ 
  "start_date": "2020-03-12", 
  "end_date": "2020-03-16", 
  "nights": 4, 
@@ -56,6 +57,6 @@ Service Payload Format 2
  "payout_price": "3800.00", 
  "security_price": "500", 
  "total_price": "4500.00" 
-}```
+}
 
 
