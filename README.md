@@ -1,7 +1,5 @@
 # README
 
-**Skills Assessment
-
 *Problem 
 
 Working with the BNB industry means that we have to integrate with a lot of external APIs. Being able to parse API payloads and save it into our database is one of the many core skills that we are looking for. Given that there are two external API payloads, create a page or endpoint that accepts the given sample payload formats and save it as an entry in a Reservation model that belongs to a guest. 
