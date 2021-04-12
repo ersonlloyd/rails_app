@@ -1,10 +1,14 @@
 class GuestsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only:[:create]
 
   def show
+    @reservations = Reservation.all
+    @guests = Guest.all
   end
 
   def create
     @reservation = Reservation.new(guest_reservation_params)
+    render json: @reservation
   end
 
   private
@@ -23,11 +27,11 @@ class GuestsController < ApplicationController
       adults: params[:number_of_adults] || params[:adults],
       children: params[:number_of_children] || params[:number_of_children],
       infants: params[:number_of_infants] || params[:infants],
-      :localized_description: "{params[:adult] + params[:children] + params[:infants]}",
+      localized_description: "{params[:adult] + params[:children] + params[:infants]}",
       :guest => {
         id: params[:guest_id] || params[:id],
         first_name: params[:guest_first_name] || params[:first_name],
-        last_name: params[:guest_last_name], || params[:last_name],
+        last_name: params[:guest_last_name] || params[:last_name],
         phone: params[:guest_phone_numbers] || params[:phone],
         email: params[:email]
       }
